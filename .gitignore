@@ -22,3 +22,6 @@ Thumbs.db
 ## Misc Data #
 ##############
 screenshots/*.png
+*.json
+*.csv
+*.txt

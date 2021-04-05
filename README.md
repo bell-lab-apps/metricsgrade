@@ -33,12 +33,14 @@ Several options are available for ease of use. Use `-h (--help)` to display them
 
   Options:
 
-  -r, --repeat [n]                 The number of times the page metrics are measured (default: 5)
-  -w, --width [width]              The viewport's width to set (default: 1920)
-  -H, --height [height]            The viewport's height to set (default: 1080)
-  -c, --custom-path [custom-path]  Path to custom path configuration file
-  --no-headless                    Defines if we dont want to use puppeteer headless mode
-  -h, --help                       output usage information
+    -r, --repeat [n]                     The number of times the page metrics are measured (default: 5)
+    -w, --width [width]                  The viewport's width to set (default: 1920)
+    -H, --height [height]                The viewport's height to set (default: 1080)
+    -c, --custom-path [custom-path]      Path to custom path configuration file
+    -o, --output-format [output-format]  The desired output format (default: table)
+    --output-file [output-file]          Whether we want to export data in a file, and the desired path to the file
+    --no-headless                        Defines if we dont want to use puppeteer headless mode
+    -h, --help                           output usage information
 ```
 
 Custom user path
@@ -87,6 +89,17 @@ Those functions have accessed to two arguments :
 
 -   `page` (The `Page` puppeteer object to be able to access to the full [puppeteer page instance API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page))
 -   `logInfo` (To log custom information)
+
+### Export data in a file
+
+You can choose to export in multiple formats and export formatted data in a file. For now, only `table`, `raw`, `json` and `csv` are available.
+`table` and `raw` data will be exported in a `txt` file. To use it, just type.
+
+```bash
+metricsgrade localhost:8000 --output-format json --output-file ~/results.json
+```
+
+If you don't provide any filename, a file will automatically be created in your current directory.
 
 ## Useful Resources
 
