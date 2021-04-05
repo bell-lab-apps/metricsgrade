@@ -88,7 +88,6 @@ const extractTimings = async (page, loadCompleteTimestamp) => {
     firstContentfulPaint: relevantData.firstContentfulPaint,
     responseEnd: relevantData.responseEnd,
     loadEventEnd: relevantData.loadEventEnd,
-    allDone: loadCompleteTimestamp - navigationStart,
   };
 };
 
@@ -126,9 +125,9 @@ const aggregateData = data => {
       key,
       metrics: {
         average: getAverage(datas),
-        max: Math.max(...datas),
         min: Math.min(...datas),
         median: getMedian(datas),
+        max: Math.max(...datas),
         standardDeviation: getStandardDeviation(datas),
       },
     });
