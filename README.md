@@ -41,6 +41,7 @@ Several options are available for ease of use. Use `-h (--help)` to display them
     --wait-until [wait-until]            The waitUntil value of the Page.reload options accepted by puppeteer
     --output-file [output-file]          Whether we want to export data in a file, and the desired path to the file
     --no-headless                        Defines if we dont want to use puppeteer headless mode
+    --no-sandbox                         Disable chrome sandbox mode, mandatory in some systems
     -h, --help                           output usage information
 ```
 
