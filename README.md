@@ -42,17 +42,17 @@ Several options are available for ease of use. Use `-h (--help)` to display them
     --output-file [output-file]          Whether we want to export data in a file, and the desired path to the file
     --no-headless                        Defines if we dont want to use puppeteer headless mode
     --no-sandbox                         Disable chrome sandbox mode, mandatory in some systems
-    -h, --help                           output usage information
+    -h, --help                           Output usage information
 ```
 
 Custom user path
 ---
 
-A custom file path can be set in the cli options. That way, you can tell puppeteer what he should do before measuring any kind of metric.
+A custom file path can be set in the cli options. That way, you can tell puppeteer what it should do before measuring any kind of metric.
 
 This option can be useful if you need to be logged in before being able to access to your application.
 
-To include your file into the process, juste use `-c <relative path to your file>` option.
+To include your file into the process, just use `-c <relative path to your file>` option.
 
 ```bash
 metricsgrade localhost:8000 -c '../../custom-path.js'
@@ -87,15 +87,15 @@ module.exports = async (page, logInfo) => {
 };
 ```
 
-Those functions have accessed to two arguments :
+Those functions have access to two arguments :
 
--   `page` (The `Page` puppeteer object to be able to access to the full [puppeteer page instance API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page))
+-   `page` (The `Page` puppeteer object to be able to access the full [puppeteer page instance API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#class-page))
 -   `logInfo` (To log custom information)
 
-### Export data in a file
+### Export data to a file
 
-You can choose to export in multiple formats and export formatted data in a file. For now, only `table`, `raw`, `json` and `csv` are available.
-`table` and `raw` data will be exported in a `txt` file. To use it, just type.
+You can choose to export to multiple formats and export formatted data to a file. For now, only `table`, `raw`, `json` and `csv` are available.
+`table` and `raw` data will be exported to a `txt` file. To use it, just type :
 
 ```bash
 metricsgrade localhost:8000 --output-format json --output-file ~/results.json
@@ -105,9 +105,9 @@ If you don't provide any filename, a file will automatically be created in your 
 
 ### "Wait until" option
 
-To make a page reload, `metricsgrade` does a `Page.reload()` from puppeteers `Page` object. This object accepts a `waitUntil` parameter, which defines when the page navigation has succeeded, and when the application should collect the metrics and reload the page. You can find more information about `Page.reload()` [right here](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagereloadoptions).
+To make a page reload, `metricsgrade` does a `Page.reload()` from puppeteer's `Page` object. This object accepts a `waitUntil` parameter, which defines when the page navigation has succeeded, and when the application should collect the metrics and reload the page. You can find more information about `Page.reload()` [right here](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagereloadoptions).
 
-To use, just add `--wait-until` flag and the desired options. Since `Page.reload` accepts and `Array` of `Strings`, if you want to add multiple options, just split them with a `,`
+To use, just add the `--wait-until` flag and the desired options. Since `Page.reload` accepts either a `Sring` or an `Array` of `Strings`, if you want to add multiple values, just split them with a `,`
 
 For example:
 
