@@ -23,5 +23,6 @@ Thumbs.db
 ##############
 screenshots/*.png
 *.json
+!package.json
 *.csv
 *.txt
