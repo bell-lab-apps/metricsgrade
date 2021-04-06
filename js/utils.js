@@ -12,7 +12,7 @@ const addMsSuffix = ms => `${Math.floor(ms)} ms`;
 /**
  * Makes the diff between a time and the navigation start to get a usable time in ms.
  *
- * @param  {integer} time            The time we want the metric from
+ * @param  {integer} time            The time we want the metric from.
  * @param  {integer} navigationStart The navigation time.
  * @return {integer} The difference between time variable and navigation time.
  */
