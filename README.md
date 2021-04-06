@@ -128,7 +128,7 @@ npm install
 Then, to use `metricsgrade` just run it via `cli.js`, for example :
 
 ```shell
-./cli.js localhost:8000
+./cli.js http://localhost:8000
 ```
 
 ## Useful Resources
