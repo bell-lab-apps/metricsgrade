@@ -115,7 +115,23 @@ For example:
 metricsgrade localhost:8000 --wait-until networkidle0,load
 ```
 
+## Development
+
+To contribute, just run the following commands :
+
+```shell
+git clone https://github.com/bell-lab-apps/metricsgrade.git
+cd metricsgrade
+npm install
+```
+
+Then, to use `metricsgrade` just run it via `cli.js`, for example :
+
+```shell
+./cli.js localhost:8000
+```
+
 ## Useful Resources
 
 -   [Commander documentation](https://github.com/tj/commander.js)
--   [Puppeteer API](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md)
+-   [Puppeteer API](https://pptr.dev/)
