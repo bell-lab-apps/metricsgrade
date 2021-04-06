@@ -1,6 +1,6 @@
 {
   "name": "metricsgrade",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Tool to measure web page performance metrics",
   "author": "Warren Galyen <wgalyen@bellhelmets.com>",
   "repository": {

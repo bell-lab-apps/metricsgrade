@@ -38,6 +38,7 @@ Several options are available for ease of use. Use `-h (--help)` to display them
     -H, --height [height]                The viewport's height to set (default: 1080)
     -c, --custom-path [custom-path]      Path to custom path configuration file
     -o, --output-format [output-format]  The desired output format (default: table)
+    --wait-until [wait-until]            The waitUntil value of the Page.reload options accepted by puppeteer
     --output-file [output-file]          Whether we want to export data in a file, and the desired path to the file
     --no-headless                        Defines if we dont want to use puppeteer headless mode
     -h, --help                           output usage information
@@ -100,6 +101,18 @@ metricsgrade localhost:8000 --output-format json --output-file ~/results.json
 ```
 
 If you don't provide any filename, a file will automatically be created in your current directory.
+
+### "Wait until" option
+
+To make a page reload, `metricsgrade` does a `Page.reload()` from puppeteers `Page` object. This object accepts a `waitUntil` parameter, which defines when the page navigation has succeeded, and when the application should collect the metrics and reload the page. You can find more information about `Page.reload()` [right here](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagereloadoptions).
+
+To use, just add `--wait-until` flag and the desired options. Since `Page.reload` accepts and `Array` of `Strings`, if you want to add multiple options, just split them with a `,`
+
+For example:
+
+```bash
+metricsgrade localhost:8000 --wait-until networkidle0,load
+```
 
 ## Useful Resources
 
