@@ -39,6 +39,7 @@ Several options are available for ease of use. Use `-h (--help)` to display them
     -c, --custom-path [custom-path]      Path to custom path configuration file
     -o, --output-format [output-format]  The desired output format (default: table)
     --wait-until [wait-until]            The waitUntil value of the Page.reload options accepted by puppeteer
+    --with-redirects                     Whether we want to test the timings of the whole redirect chain
     --output-file [output-file]          Whether we want to export data in a file, and the desired path to the file
     --no-headless                        Defines if we dont want to use puppeteer headless mode
     --no-sandbox                         Disable chrome sandbox mode, mandatory in some systems
